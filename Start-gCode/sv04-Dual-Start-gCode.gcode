@@ -21,6 +21,7 @@ G1 Z2.0 F3000;
 ; Modified gcode:
 
 ;Dual start
+M605 S1; Set printer to auto_park mode
 M140 S{material_bed_temperature}; Start preheating the bed
 G28; Home all axes
 M190 S{material_bed_temperature} ; heat to bed setting in Cura and WAIT

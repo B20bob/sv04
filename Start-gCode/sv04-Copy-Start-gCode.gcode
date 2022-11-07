@@ -5,7 +5,7 @@ M140 S{material_bed_temperature};
 M104 S{material_print_temperature};
 M280 P0 S160;
 G4 P100;
-G28;
+G28
 M190 S{material_bed_temperature};
 M109 S{material_print_temperature};
 G92 E0;
@@ -21,6 +21,7 @@ G1 Z2.0 F3000;
 ; Modified gcode:
 
 ;Copy start G-code
+M605 S2; Set printer to copy mode (Duplication mode in marlin)
 M140 S{material_bed_temperature}; Start Preheating the bed
 G28; Home all axes
 M190 S{material_bed_temperature} ; heat to bed setting in Cura and WAIT
